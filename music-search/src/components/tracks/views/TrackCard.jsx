@@ -14,8 +14,8 @@ import CloseIcon from '@material-ui/icons/Close'
 import Slide from '@material-ui/core/Slide'
 
 
-function AlbumCard(props) {
-  const { strAlbumThumb, strAlbum, } = props
+function TrackCard(props) {
+  const { strTrackThumb, strTrack, } = props
   const classes = useStyles()
   const [open, setOpen] = React.useState(false)
 
@@ -36,13 +36,13 @@ function AlbumCard(props) {
           <CardMedia
             className="album-card__media"
             component="img"
-            alt={strAlbum}
-            image={strAlbumThumb}
-            title={strAlbum}
+            alt={strTrack}
+            image={strTrackThumb}
+            title={strTrack}
           />
           <CardContent style={{ padding: '0' }}>
             <Typography variant="subtitle1">
-              {strAlbum}
+              {strTrack}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -60,7 +60,7 @@ function AlbumCard(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              {strAlbum}
+              {strTrack}
             </Typography>
           </Toolbar>
         </AppBar>
@@ -69,7 +69,7 @@ function AlbumCard(props) {
     </div>
   )
 }
-export default AlbumCard
+export default TrackCard
 
 
 

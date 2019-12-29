@@ -47,7 +47,7 @@ export default class ArtistCardList extends Component {
             {/* {console.log(this.state.artistList)} */}
             {artistList.map(tile => (
               // TODO: Add map key
-              <GridListTile style={useStyles.gridListTile}>
+              <GridListTile key='tile.strArtist' style={useStyles.gridListTile}>
                 <ArtistCard
                   strArtist={tile.strArtist}
                   strArtistThumb={tile.strArtistThumb}

@@ -44,8 +44,8 @@ class Search extends Component {
         <div>
           <InputGroup className="mb-3">
             <FormControl
-              placeholder="Search Artists, Albums or Tracks..."
-              aria-label="Search Artists, Albums or Tracks..."
+              placeholder="Search Artists or Tracks..."
+              aria-label="Search Artists or Tracks..."
               aria-describedby="basic-addon2"
               onChange={e => {
                 this.onChange(e)

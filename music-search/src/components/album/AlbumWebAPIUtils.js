@@ -3,7 +3,7 @@ import AlbumActionCreators from './AlbumActionCreators'
 
 const AlbumWebAPIUtils = {
   getAlbumLists(searchText) {
-    if (searchText === '' || searchText === undefined) searchText = 'Queen'
+    if (searchText === '' || searchText === undefined) searchText = 'Coldplay'
     const uri = 'https://theaudiodb.com/api/v1/json/1/searchalbum.php?s='.concat(searchText)
 
     $.ajax({

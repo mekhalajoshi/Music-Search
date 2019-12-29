@@ -3,7 +3,7 @@ import { LinearProgress } from '@material-ui/core';
 
 
 
-function AlbumListLoading() {
+function TrackListLoading() {
 
   return (
     <div >
@@ -12,4 +12,4 @@ function AlbumListLoading() {
   )
 }
 
-export default AlbumListLoading
+export default TrackListLoading

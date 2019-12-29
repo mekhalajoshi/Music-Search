@@ -4,7 +4,7 @@ import Content from './components/Content'
 import Search from './components/Search'
 import ArtistActionCreators from './components/artist/ArtistActionCreators'
 import AlbumActionCreators from './components/album/AlbumActionCreators'
-
+import TrackActionCreator from './components/tracks/TrackActionCreator'
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class App extends Component {
     this.setState({ searchText: val })
     ArtistActionCreators.getArtistList(val)
     AlbumActionCreators.getAlbumList(val)
-
+    TrackActionCreator.getTrackList(val)
   }
 
 

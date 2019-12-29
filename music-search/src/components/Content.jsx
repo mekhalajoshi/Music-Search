@@ -2,6 +2,7 @@ import React from 'react'
 import ArtistCardList from './artist/views/ArtistCardList'
 // import ArtistCardDetail from './artist/ArtistCardDetail'
 import AlbumCardList from './album/AlbumCardList'
+import Tracks from './tracks/views/Tracks'
 import './css/Content.css'
 
 const Content = props => {
@@ -16,7 +17,8 @@ const Content = props => {
       <ArtistCardList />
       <h3 className='List-Label'>Albums</h3>
       <AlbumCardList />
-      {/* <ArtistCardDetail /> */}
+      <h3 className='List-Label'>Tracks</h3>
+      <Tracks />
     </div>
   )
 }

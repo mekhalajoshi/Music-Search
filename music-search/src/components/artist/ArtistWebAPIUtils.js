@@ -3,7 +3,7 @@ import ArtistActionCreators from './ArtistActionCreators'
 
 const ArtistWebAPIUtils = {
   getArtistLists(searchText) {
-    if (searchText === '' || searchText === undefined) searchText = 'Queen'
+    if (searchText === '' || searchText === undefined) searchText = 'Coldplay'
     const uri = 'https://www.theaudiodb.com/api/v1/json/1/search.php?s='.concat(searchText)
 
     $.ajax({
