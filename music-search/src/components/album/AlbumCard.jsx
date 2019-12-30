@@ -28,7 +28,7 @@ function AlbumCard(props) {
   }
   let defaultImage = "https://www.songandlyrics.net/assets/img/album.jpg"
 
-  if (strAlbumThumb !== "") {
+  if (strAlbumThumb !== "" && strAlbumThumb !== null) {
     defaultImage = strAlbumThumb
   }
 

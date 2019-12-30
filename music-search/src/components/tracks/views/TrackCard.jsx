@@ -28,7 +28,7 @@ function TrackCard(props) {
 
   let defaultImage = "https://www.glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png"
 
-  if (strTrackThumb !== null) {
+  if (strTrackThumb !== null && strTrackThumb !== "") {
     defaultImage = strTrackThumb
   }
   return (

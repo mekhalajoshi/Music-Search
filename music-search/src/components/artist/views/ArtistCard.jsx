@@ -29,7 +29,7 @@ function ArtistCard(props) {
   }
   let defaultImage = "https://pngimage.net/wp-content/uploads/2018/05/default-user-profile-image-png-2.png"
 
-  if (strArtistThumb !== "") {
+  if (strArtistThumb !== "" && strArtistThumb !== null) {
     defaultImage = strArtistThumb
   }
 
