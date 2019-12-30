@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Music-Search/static/css/main.825665ba.chunk.css",
-    "main.js": "/Music-Search/static/js/main.61aded8b.chunk.js",
-    "main.js.map": "/Music-Search/static/js/main.61aded8b.chunk.js.map",
+    "main.css": "/Music-Search/static/css/main.b17bbc8c.chunk.css",
+    "main.js": "/Music-Search/static/js/main.96de0208.chunk.js",
+    "main.js.map": "/Music-Search/static/js/main.96de0208.chunk.js.map",
     "runtime-main.js": "/Music-Search/static/js/runtime-main.e2d94aa7.js",
     "runtime-main.js.map": "/Music-Search/static/js/runtime-main.e2d94aa7.js.map",
-    "static/js/2.b7697243.chunk.js": "/Music-Search/static/js/2.b7697243.chunk.js",
-    "static/js/2.b7697243.chunk.js.map": "/Music-Search/static/js/2.b7697243.chunk.js.map",
+    "static/js/2.eb3181b6.chunk.js": "/Music-Search/static/js/2.eb3181b6.chunk.js",
+    "static/js/2.eb3181b6.chunk.js.map": "/Music-Search/static/js/2.eb3181b6.chunk.js.map",
     "index.html": "/Music-Search/index.html",
-    "precache-manifest.f1b8822da3f8a56501342cfdaa9fe88e.js": "/Music-Search/precache-manifest.f1b8822da3f8a56501342cfdaa9fe88e.js",
+    "precache-manifest.751dc08e8e71aa31d8ee8932964cbd4c.js": "/Music-Search/precache-manifest.751dc08e8e71aa31d8ee8932964cbd4c.js",
     "service-worker.js": "/Music-Search/service-worker.js",
-    "static/css/main.825665ba.chunk.css.map": "/Music-Search/static/css/main.825665ba.chunk.css.map",
-    "static/js/2.b7697243.chunk.js.LICENSE": "/Music-Search/static/js/2.b7697243.chunk.js.LICENSE"
+    "static/css/main.b17bbc8c.chunk.css.map": "/Music-Search/static/css/main.b17bbc8c.chunk.css.map",
+    "static/js/2.eb3181b6.chunk.js.LICENSE": "/Music-Search/static/js/2.eb3181b6.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.e2d94aa7.js",
-    "static/js/2.b7697243.chunk.js",
-    "static/css/main.825665ba.chunk.css",
-    "static/js/main.61aded8b.chunk.js"
+    "static/js/2.eb3181b6.chunk.js",
+    "static/css/main.b17bbc8c.chunk.css",
+    "static/js/main.96de0208.chunk.js"
   ]
 }
