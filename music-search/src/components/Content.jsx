@@ -1,6 +1,6 @@
 import React from 'react'
 import ArtistCardList from './artist/views/ArtistCardList'
-// import ArtistCardDetail from './artist/ArtistCardDetail'
+import { Typography } from '@material-ui/core'
 import AlbumCardList from './album/AlbumCardList'
 import Tracks from './tracks/views/Tracks'
 import './css/Content.css'
@@ -10,9 +10,14 @@ const Content = props => {
     ? `Searching for ${props.searchText}`
     : null
 
+
   return (
     <div>
-      {searchResults}
+      <div className='list_container'>
+        <Typography variant='h5' color='textPrimary' >
+          {searchResults}
+        </Typography>
+      </div>
       <h3 className='List-Label'>Artists</h3>
       <ArtistCardList />
       <h3 className='List-Label'>Albums</h3>

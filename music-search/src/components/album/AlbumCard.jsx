@@ -26,6 +26,12 @@ function AlbumCard(props) {
   function handleClose() {
     setOpen(false)
   }
+  let defaultImage = "https://www.songandlyrics.net/assets/img/album.jpg"
+
+  if (strAlbumThumb !== "") {
+    defaultImage = strAlbumThumb
+  }
+
   return (
     <div>
       <Card style={useStyles.card}>
@@ -37,7 +43,7 @@ function AlbumCard(props) {
             className="album-card__media"
             component="img"
             alt={strAlbum}
-            image={strAlbumThumb}
+            image={defaultImage}
             title={strAlbum}
           />
           <CardContent style={{ padding: '0' }}>

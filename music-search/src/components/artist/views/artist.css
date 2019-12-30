@@ -19,3 +19,10 @@
 .artist-width {
     width: 100px;
 }
+.list_container{
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-left: 20px;
+}

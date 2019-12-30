@@ -1,14 +1,16 @@
 import React from 'react'
-import { GridList, GridListTile } from '@material-ui/core'
+import { GridList, GridListTile, Typography } from '@material-ui/core'
 import AlbumCard from './AlbumCard'
-
+import './css/AlbumList.css'
 
 function AlbumList(props) {
   const { albumList } = props
   if (albumList) {
     return (
-      <div style={useStyles.root}>
-        <GridList style={useStyles.gridList}>
+      <div className='list_container'>
+        <GridList
+          style={useStyles.gridList}
+        >
           {albumList.map(tile => (
             // TODO: Add map key
             <GridListTile
@@ -27,7 +29,11 @@ function AlbumList(props) {
   } else {
     // TODO: Error handling
     return (
-      <h1>Not Found</h1>
+      <div className='list_container'>
+        <Typography variant='h5' color='textPrimary' >
+          No Results found
+      </Typography>
+      </div>
     )
   }
 }
@@ -35,13 +41,7 @@ function AlbumList(props) {
 
 
 const useStyles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    overflow: 'hidden',
-    marginTop: '20px',
-    padding: '20px',
-  },
+
   gridList: {
     flexWrap: 'nowrap',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.

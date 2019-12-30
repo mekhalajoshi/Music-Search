@@ -1,12 +1,14 @@
-.List-Label{
-  margin-left: 20px;
-}
 .list_container{
-  .list_container{
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   margin-left: 20px;
 }
+.gridListTile{
+  width: 160px;
+}
+.gridList{
+  flex-wrap: nowrap;
+    transform: translateZ(0) ;
 }

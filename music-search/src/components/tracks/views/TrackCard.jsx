@@ -13,7 +13,6 @@ import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 import Slide from '@material-ui/core/Slide'
 
-
 function TrackCard(props) {
   const { strTrackThumb, strTrack, } = props
   const classes = useStyles()
@@ -26,6 +25,12 @@ function TrackCard(props) {
   function handleClose() {
     setOpen(false)
   }
+
+  let defaultImage = "https://www.glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png"
+
+  if (strTrackThumb !== null) {
+    defaultImage = strTrackThumb
+  }
   return (
     <div>
       <Card style={useStyles.card}>
@@ -37,7 +42,7 @@ function TrackCard(props) {
             className="album-card__media"
             component="img"
             alt={strTrack}
-            image={strTrackThumb}
+            image={defaultImage}
             title={strTrack}
           />
           <CardContent style={{ padding: '0' }}>

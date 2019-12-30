@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import Button from 'react-bootstrap/Button'
-import InputGroup from 'react-bootstrap/InputGroup'
-import FormControl from 'react-bootstrap/FormControl'
-// import Dropdown from 'react-bootstrap/Dropdown'
-// import DropdownButton from 'react-bootstrap/DropdownButton'
+import { TextField, IconButton, } from '@material-ui/core'
+import SearchIcon from '@material-ui/icons/Search'
 
 
 class Search extends Component {
@@ -23,90 +20,75 @@ class Search extends Component {
     })
   }
 
+
+
   onKeyPressEnter(event) {
     const { searchText } = this.state
     const { onInputChange } = this.props
 
     if (event.keyCode === 13 || event.which === 13) {
       event.preventDefault() // Ensure it is only this code that run
+      this.setState({
+        searchText: ''
+      })
       onInputChange(searchText)
     }
   }
 
-  ;
 
   render() {
     const { searchText } = this.state
     const { onInputChange } = this.props
 
     return (
-      <div className="artist-card__margin">
-        <div>
-          <InputGroup className="mb-3">
-            <FormControl
-              placeholder="Search Artists or Tracks..."
-              aria-label="Search Artists or Tracks..."
-              aria-describedby="basic-addon2"
-              onChange={e => {
-                this.onChange(e)
-              }}
-              onKeyPress={e => {
-                this.onKeyPressEnter(e)
-              }}
-            />
+      // <div className="artist-card__margin">
 
-            {/* <DropdownButton
-              as={InputGroup.Append}
-              variant="outline-secondary"
-              title="Filter"
-              id="input-group-dropdown-2"
-            >
-              <Dropdown.Item
-                onClick={() => {
-                  console.log('All selected')
-                }}
-                active
-              >
-                All
-              </Dropdown.Item>
-              <Dropdown.Item
-                onClick={() => {
-                  console.log('Artists selected')
-                }}
-              >
-                Artists
-              </Dropdown.Item>
-              <Dropdown.Item
-                onClick={() => {
-                  console.log('Albums selected')
-                }}
-              >
-                Albums
-              </Dropdown.Item>
-              <Dropdown.Item
-                onClick={() => {
-                  console.log('Tracks selected')
-                }}
-              >
-                Tracks
-              </Dropdown.Item>
-            </DropdownButton> */}
+      <div style={useStyles.Paper}>
 
-            <InputGroup.Append>
-              <Button
-                variant="outline-secondary"
-                onClick={() => {
-                  onInputChange(searchText)
-                }}
-              >
-                Search
-              </Button>
-            </InputGroup.Append>
-          </InputGroup>
-        </div>
+        <TextField
+          value={searchText}
+          onChange={e => {
+            this.onChange(e)
+          }}
+          onKeyPress={e => {
+            this.onKeyPressEnter(e)
+          }}
+
+          id="outlined-with-placeholder"
+          label="Search Artists"
+          placeholder="Eg. Coldplay"
+          style={useStyles.textField}
+          margin="normal"
+          variant="outlined"
+          fullWidth
+        />
+
+        <IconButton
+          style={useStyles.icon}
+          onClick={() => {
+            this.setState({
+              searchText: ''
+            })
+            onInputChange(searchText)
+          }}>
+          <SearchIcon />
+        </IconButton>
       </div>
+
     )
   }
+}
+
+const useStyles = {
+  Paper: {
+    margin: '10px',
+    paddingLeft: '10px',
+    alignItems: 'center',
+    display: 'flex',
+  },
+  icon: {
+    outline: 'none',
+  },
 }
 
 export default Search

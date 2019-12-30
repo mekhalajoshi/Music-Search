@@ -1,13 +1,13 @@
 import React from 'react'
-import { GridList, GridListTile } from '@material-ui/core'
+import { GridList, GridListTile, Typography } from '@material-ui/core'
 import TrackCard from './TrackCard'
-
+import '../css/TrackList.css'
 
 function TrackList(props) {
   const { trackList } = props
   if (trackList) {
     return (
-      <div style={useStyles.root}>
+      <div className='list_container'>
         <GridList style={useStyles.gridList}>
           {trackList.map(tile => (
             // TODO: Add map key
@@ -27,7 +27,11 @@ function TrackList(props) {
   } else {
     // TODO: Error handling
     return (
-      <h1>Not Found</h1>
+      <div className='list_container'>
+        <Typography variant='h5' color='textPrimary' >
+          No Results found
+      </Typography>
+      </div>
     )
   }
 }
@@ -36,11 +40,7 @@ function TrackList(props) {
 
 const useStyles = {
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    overflow: 'hidden',
-    marginTop: '20px',
-    padding: '20px',
+
   },
   gridList: {
     flexWrap: 'nowrap',

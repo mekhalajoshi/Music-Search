@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { GridList, GridListTile } from '@material-ui/core'
+import { GridList, GridListTile, Typography } from '@material-ui/core'
 import ArtistCard from './ArtistCard'
 import ArtistActionCreators from '../ArtistActionCreators'
-
+import './artist.css'
 import ArtistStore from '../ArtistStore'
 
 // Private function that gets values from store
@@ -37,12 +37,15 @@ export default class ArtistCardList extends Component {
     this.setState(getStateFromStore())
   }
 
+
+
   render() {
     const { artistList } = this.state
 
+
     if (artistList) {
       return (
-        <div style={useStyles.root}>
+        <div className='list_container'>
           <GridList style={useStyles.gridList}>
             {/* {console.log(this.state.artistList)} */}
             {artistList.map(tile => (
@@ -62,7 +65,11 @@ export default class ArtistCardList extends Component {
     } else {
       // TODO: Error handling
       return (
-        <h1>Not Found</h1>
+        <div className='list_container'>
+          <Typography variant='h5' color='textPrimary' >
+            No Results found
+          </Typography>
+        </div>
       )
     }
   }

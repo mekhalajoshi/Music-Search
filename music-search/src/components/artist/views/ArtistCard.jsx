@@ -27,6 +27,12 @@ function ArtistCard(props) {
   function handleClose() {
     setOpen(false)
   }
+  let defaultImage = "https://pngimage.net/wp-content/uploads/2018/05/default-user-profile-image-png-2.png"
+
+  if (strArtistThumb !== "") {
+    defaultImage = strArtistThumb
+  }
+
   return (
     <div>
       <Card style={useStyles.card}>
@@ -35,7 +41,7 @@ function ArtistCard(props) {
             className="artist-card__media"
             component="img"
             alt={strArtist}
-            image={strArtistThumb}
+            image={defaultImage}
             title={strArtist}
           />
           <CardContent style={{ padding: '0' }}>
